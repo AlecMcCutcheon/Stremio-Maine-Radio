@@ -1,5 +1,5 @@
-const { serveHTTP } = require("stremio-addon-sdk");
+#!/usr/bin/env node
 
-const addonInterface = require("./addon");
-serveHTTP(addonInterface, { port: 7000 });
-
+const { serveHTTP, publishToCentral } = require("stremio-addon-sdk")
+const addonInterface = require("./addon")
+serveHTTP(addonInterface, { port: process.env.PORT || 61327 })
