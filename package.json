@@ -9,21 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Stremio/addon-helloworld"
+    "url": "https://github.com/AlecMcCutcheon/stremio-maine-radio"
   },
   "keywords": [
     "stremio",
-    "stremio-addons",
+    "stremio-radio",
     "radio"
   ],
-  "author": "Smart Code OOD",
+  "author": "AlecMcCutcheon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Stremio/addon-helloworld/issues"
+    "url": "https://github.com/AlecMcCutcheon/stremio-maine-radio/issues"
   },
-  "homepage": "https://github.com/Stremio/addon-helloworld",
+  "homepage": "https://github.com/AlecMcCutcheon/stremio-maine-radio",
   "dependencies": {
-    "magnet-uri": "^5.1.3",
     "stremio-addon-sdk": "^1.6.10"
   }
 }
