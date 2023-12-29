@@ -1,7 +1,7 @@
 {
   "name": "stremio-maine-radio",
-  "version": "1.0.1",
-  "description": "Stremio Add-On to listen to all Maine Radio Stations",
+  "version": "1.0.2",
+  "description": "Stremio Add-On to listen to Maine Radio Stations",
   "main": "server.js",
   "scripts": {
     "test": "node test/*",
