@@ -188,6 +188,8 @@ builder.defineCatalogHandler((args) => {
 builder.defineMetaHandler((args) => {
     return new Promise((resolve, reject) => {
         try {
+            console.log('Meta Handler Args:', args);
+
             const mkItem = item => ({
                 'id': item['id'],
                 'type': "radio",
