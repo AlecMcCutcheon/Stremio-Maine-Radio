@@ -190,7 +190,7 @@ builder.defineMetaHandler((args) => {
         try {
             const mkItem = item => ({
                 'id': item['id'],
-                'type': "Local News",
+                'type': "radio",
                 'name': item['name'],
                 'genres': item['genres'],
                 'poster': item["poster"],
