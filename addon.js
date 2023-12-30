@@ -188,11 +188,9 @@ builder.defineCatalogHandler((args) => {
 builder.defineMetaHandler((args) => {
     return new Promise((resolve, reject) => {
         try {
-            console.log('Meta Handler Args:', args);
-
             const mkItem = item => ({
                 'id': item['id'],
-                'type': "radio",
+                'type': "Local News",
                 'name': item['name'],
                 'genres': item['genres'],
                 'poster': item["poster"],
@@ -200,16 +198,10 @@ builder.defineMetaHandler((args) => {
                 'posterShape': "square",
             });
 
-            const foundItem = getCatalog().find(item => item['id'] === args.id);
-
-            if (foundItem) {
-                const meta = {
-                    'meta': mkItem(foundItem),
-                };
-                resolve(meta);
-            } else {
-                reject(new Error(`Item with id ${args.id} not found`));
-            }
+            const meta = {
+                'meta': mkItem(getCatalog().find(item => item['id'] === args.id)),
+            };
+            resolve(meta);
         } catch (error) {
             console.error("Error in defineMetaHandler:", error);
             reject(error);
