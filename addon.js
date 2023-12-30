@@ -198,10 +198,16 @@ builder.defineMetaHandler((args) => {
                 'posterShape': "square",
             });
 
-            const meta = {
-                'meta': mkItem(getCatalog().find(item => item['id'] === args.id)),
-            };
-            resolve(meta);
+            const foundItem = getCatalog().find(item => item['id'] === args.id);
+
+            if (foundItem) {
+                const meta = {
+                    'meta': mkItem(foundItem),
+                };
+                resolve(meta);
+            } else {
+                reject(new Error(`Item with id ${args.id} not found`));
+            }
         } catch (error) {
             console.error("Error in defineMetaHandler:", error);
             reject(error);
